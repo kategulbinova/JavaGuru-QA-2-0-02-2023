@@ -1,1 +1,3 @@
 Hello Java Guru!
+
+Some other text
