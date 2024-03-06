@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html>
+
+    <head>
+        <title>Осень</title>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <td colspan="3">
+                    <h1><a href="index.html">Времена года</a></h1>
+                </td>
+            </tr>
+            <tr>
+
+                <td width=20%>
+                    <h2><a href="zima.html">Зима</a></h2>
+                    <br>
+                    <h2><a href="vesna.html">Весна</a></h2>
+                    <br>
+                    <h2><a href="leto.html">Лето</a></h2>
+                </td>
+
+                <td>
+                    <img id="slider" src="https://35photo.pro/photos_main/131/659164.jpg" width=60% height=60% />
+
+                    <script>
+                        var images = [
+                            "https://https://35photo.pro/photos_main/131/659164.jpg",
+                            "https://pibig.info/uploads/posts/2021-12/1638856971_1-pibig-info-p-sentyabr-nachalo-oseni-priroda-krasivo-fot-1.jpg",
+                            "https://pibig.info/uploads/posts/2021-12/1638856926_16-pibig-info-p-sentyabr-nachalo-oseni-priroda-krasivo-fot-18.jpg"
+                        ];
+                        var index = 0;
+
+                        setInterval(function () {
+                            index = (index + 1) % images.length;
+                            document.getElementById('slider').src = images[index];
+                        }, 4000); 
+                    </script>
+                </td>
+                <td width=20%>
+                    <h1>Осень</h1>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <p> вторая домашняя работа</p>
+                </th>
+            </tr>
+        </table>
+    </body>
+
+</html>
