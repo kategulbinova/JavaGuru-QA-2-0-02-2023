@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html>
+
+    <head>
+        <title>Весна</title>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <th colspan="3">
+                    <h1><a href="index.html">Времена года</a></h1>
+                </th>
+            </tr>
+            <tr>
+
+                <td width=20%>
+                    <h2><a href="leto.html">Лето</a></h2>
+                    <br>
+                    <h2><a href="osenj.html">Осень</a></h2>
+                    <br>
+                    <h2><a href="zima.html">Зима</a></h2>
+                </td>
+                <th>
+                    <img id="slider"
+                        src="https://kartin.papik.pro/uploads/posts/2023-06/1687447421_kartin-papik-pro-p-kartinki-vesna-kvadratnie-30.jpg"
+                        width=60% height=60% />
+
+                    <script>
+                        var images = [
+                            "https://kartin.papik.pro/uploads/posts/2023-06/1687447421_kartin-papik-pro-p-kartinki-vesna-kvadratnie-30.jpg",
+                            "https://kartin.papik.pro/uploads/posts/2023-06/1687447411_kartin-papik-pro-p-kartinki-vesna-kvadratnie-20.jpg",
+                            "https://kartin.papik.pro/uploads/posts/2023-06/1687447395_kartin-papik-pro-p-kartinki-vesna-kvadratnie-8.jpg"
+                        ];
+                        var index = 0;
+
+                        setInterval(function () {
+                            index = (index + 1) % images.length;
+                            document.getElementById('slider').src = images[index];
+                        }, 4000); 
+                    </script>
+                </th>
+                <td width=20%>
+                    <h1>Весна</h1>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <p> вторая домашняя работа</p>
+                </th>
+            </tr>
+        </table>
+    </body>
+
+</html>
