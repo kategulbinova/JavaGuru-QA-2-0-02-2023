@@ -1,0 +1,149 @@
+{
+  "id": "e9c50ba7-3abf-4e0e-9864-f243cccfe890",
+  "version": "2.0",
+  "name": "Test0220",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "7ac2fc72-679a-49aa-8049-d7273ecca048",
+    "name": "javaguru0220",
+    "commands": [{
+      "id": "33504f43-9d04-475b-a708-8f8ca68d2ab6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8b4c373-5de3-4572-99b4-9ef7c19985e7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x660",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aec3ced6-2304-4858-a369-97486a722b07",
+      "comment": "",
+      "command": "click",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc2a1cce-bece-45f1-9600-f8d6c8fa12ca",
+      "comment": "",
+      "command": "type",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "ja"
+    }, {
+      "id": "6fd4fb1f-8cb3-45f3-9a8c-84357218d792",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jZ2SBf b",
+      "targets": [
+        ["css=#jZ2SBf b", "css:finder"],
+        ["xpath=//div[@id='jZ2SBf']/div/span/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'vaguru')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "edb42b28-8ff1-440c-b784-a63737202d8f",
+      "comment": "",
+      "command": "click",
+      "target": "id=cnt",
+      "targets": [
+        ["id=cnt", "id"],
+        ["css=#cnt", "css:finder"],
+        ["xpath=//div[@id='cnt']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div", "xpath:idRelative"],
+        ["xpath=//body/div[6]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e02aed2c-e08d-49c2-b406-c0caa5421c01",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tF2Cxc > .yuRUbf .notranslate .VuuXrf",
+      "targets": [
+        ["css=.tF2Cxc > .yuRUbf .notranslate .VuuXrf", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div/div/div/div/div/div/div/div/span/a/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//a/div/div/div/span", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win4858",
+      "windowTimeout": 2000
+    }, {
+      "id": "a6e041e7-d53f-45f3-96cf-f8a637e9f97c",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win4858}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "455ffa17-ae7e-4aad-8a70-80cb7bb14d1b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.close-popup-cross",
+      "targets": [
+        ["css=.close-popup-cross", "css:finder"],
+        ["xpath=//img[contains(@src,'https://javaguru.lv/wp-content/themes/javaguru/images/cross.svg')]", "xpath:img"],
+        ["xpath=//div[3]/img[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9edc3f1d-8c7c-4c48-b2bb-fe5b1ee05365",
+      "comment": "",
+      "command": "click",
+      "target": "css=.d-block .single-theme-point:nth-child(2)",
+      "targets": [
+        ["css=.d-block .single-theme-point:nth-child(2)", "css:finder"],
+        ["xpath=//a/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f05f5b32-b720-48f4-90ff-6e73105e5d29",
+      "comment": "",
+      "command": "click",
+      "target": "css=.single-course:nth-child(3) .course-image img",
+      "targets": [
+        ["css=.single-course:nth-child(3) .course-image img", "css:finder"],
+        ["xpath=//img[contains(@src,'https://javaguru.lv/wp-content/uploads/2021/07/qa_2.0_ikona.png')]", "xpath:img"],
+        ["xpath=//div[2]/div[3]/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "78be3ee5-e1b5-4a39-9872-91f1a5fa1098",
+      "comment": "",
+      "command": "click",
+      "target": "css=.non-overflow-big-container-without-radius-for-header",
+      "targets": [
+        ["css=.non-overflow-big-container-without-radius-for-header", "css:finder"],
+        ["xpath=//body/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f48279c5-f6ab-4255-8b56-e28c5ea12f65",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7ac2fc72-679a-49aa-8049-d7273ecca048"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}
