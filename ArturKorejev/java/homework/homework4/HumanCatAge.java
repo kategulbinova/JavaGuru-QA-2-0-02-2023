@@ -13,7 +13,7 @@ public class HumanCatAge {
         System.out.print("Cat age is ");
         System.out.println(catAge);
         System.out.print("Cats age equals ");
-        System.out.print(catAgeIntoHuman);
-        System.out.println(" human ages");     // Print result text
+        System.out.print(catAgeIntoHuman);      // Print result text
+        System.out.println(" human ages");
     }
 }
