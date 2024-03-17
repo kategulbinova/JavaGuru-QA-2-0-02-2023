@@ -1,0 +1,52 @@
+	body {
+  		background-image: url('Needlework_background_1.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed; 
+		background-size: cover;
+		}
+	h1 {
+		font-size:720%;
+		color:#003C7B; /* синий */
+		}
+	h2 {
+		font-size:520%;
+		font-family:Fantasy;
+		color:#7929A5; /* фиолетовый */
+		}
+	h3 {
+		font-size:180%;
+		font-weight:bold;
+		font-family:Fantasy;
+		color:#7929A5; /* фиолетовый */
+		}
+	th, td {
+		text-align:center;
+		}
+	th {
+		font-size:50px;
+		color:#003C7B; /* синий */
+		text-shadow:3px 3px 3px cyan; /* яркая тень */
+		}
+	.button {
+  		border: none;
+ 		color:#003C7B; /* синий */
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+  		font-size: 25px;
+		cursor: pointer;
+		}
+	.button1 {
+		border: 3px solid #7929A5;
+		border-radius: 12px;
+		color:#7929A5; /* фиолетовый */
+		font-weight:bold;
+		font-family:Fantasy;
+		}
+	.button2 {
+		color:#7929A5 /* фиолетовый */
+		}
+	.disabled {
+  		opacity: 0.6;
+  		cursor: not-allowed;
+		}
