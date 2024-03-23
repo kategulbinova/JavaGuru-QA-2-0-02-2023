@@ -1,6 +1,6 @@
 package lessons.lesson4;
 
-public class calculationsPractice {
+public class CalculationsPractice {
     public static void main(String[] args) {
         int result;
         int x = 5;
