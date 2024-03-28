@@ -2,7 +2,7 @@ package homework.homework4;
 
 import java.util.Scanner; // class added for activation data input
 
-public class catAge {
+public class СatAge {
 
     private static Scanner input = new Scanner (System.in); // Class "scanner" added for data input
     public static void main(String[] args) {
