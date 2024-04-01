@@ -1,4 +1,4 @@
-package lessons.lesson5;
+package Lessons.lesson5;
 
 public class BooleanPractice {
     public static void main(String[] args) {

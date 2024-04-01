@@ -1,4 +1,4 @@
-package lessons.lesson5;
+package Lessons.lesson5;
 
 public class Lesson5PracticeStringWeekdays {
     public static void main(String[] args) {

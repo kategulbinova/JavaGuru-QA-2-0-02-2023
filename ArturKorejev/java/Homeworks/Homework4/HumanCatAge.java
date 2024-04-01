@@ -1,4 +1,4 @@
-package homework.homework4;
+package Homeworks.Homework4;
 
 public class HumanCatAge {
     public static void main(String[] args) {   // Main method created

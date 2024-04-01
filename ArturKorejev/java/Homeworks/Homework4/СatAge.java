@@ -1,4 +1,4 @@
-package homework.homework4;
+package Homeworks.Homework4;
 
 import java.util.Scanner; // class added for activation data input
 
