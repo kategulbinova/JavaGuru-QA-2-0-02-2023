@@ -3,8 +3,7 @@ package lesson6;
 public class CircleCalculations {
 
     static double calculateCircumference(double radius) {
-        double result = 2 * Math.PI * radius;
-        return result;
+        return 2 * Math.PI * radius;
     }
 
     public static void main(String[] args) {
