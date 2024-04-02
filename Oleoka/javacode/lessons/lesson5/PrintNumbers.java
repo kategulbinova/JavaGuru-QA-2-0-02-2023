@@ -2,14 +2,19 @@ package lessons.lesson5;
 
 public class PrintNumbers {
     public static void main(String[] args){
+        String star = "*";//Null
 
-        for (int a = 0; a <= 20; a++){
+                for (int a = 0 ;a <= 7; a++)
+                {
+        System.out.println(star.concat(star).concat(star).concat(star).concat(star).concat(star).concat(star).concat(star).concat(star).concat(star).concat(star).concat(star).concat(star).concat(star).concat(star));
 
-            System.out.println(a + "squared:" + (a * a) + "; cubed:" + (a  * a* a)); }
-
-
-
+                }
 
 
     }
+
+
+
 }
+
+
