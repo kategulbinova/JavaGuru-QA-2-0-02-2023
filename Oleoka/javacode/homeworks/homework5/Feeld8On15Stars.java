@@ -11,6 +11,11 @@ public class Feeld8On15Stars {
         }
         System.out.println("The end");
 
-
+        for (int y= 0; y<8; y++){
+            for (int x = 0; x<15; x++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
