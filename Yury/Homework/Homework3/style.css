@@ -1,0 +1,18 @@
+h1 {
+	font-size:60px;
+	color:red;
+}
+			
+
+table, td, tr {
+	border-collapse:collapse;
+	border:1px solid white;
+	background-color:C2C0F4;
+}
+
+p {
+	font-family:"Times New Roman";
+	text-allign:justify;
+	color:grey;
+	size:10px;
+}	
