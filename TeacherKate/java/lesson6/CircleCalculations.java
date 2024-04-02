@@ -3,11 +3,12 @@ package lesson6;
 public class CircleCalculations {
 
     static double calculateCircumference(double radius) {
-        double result = 2 * 3.14 * radius;
+        double result = 2 * Math.PI * radius;
         return result;
     }
 
     public static void main(String[] args) {
-        System.out.println( "Circumference for this circle is: " + calculateCircumference(3.8) + " cm");
+        double radius = 3.8;
+        System.out.println( "Circumference for this circle is: " + calculateCircumference(radius) + " cm");
     }
 }
