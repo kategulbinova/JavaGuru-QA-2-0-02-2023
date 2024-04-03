@@ -7,7 +7,7 @@ public class CircleCalculations {
     }
 
     static double calculateDiameter(double radius) {
-        return 2 * radius;
+        return 2 * radius ;
     }
     public static void main(String[] args) {
         double radius = 3.8;
