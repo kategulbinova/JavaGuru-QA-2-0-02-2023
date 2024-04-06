@@ -1,25 +1,28 @@
 package Homeworks.Homework6;
 
+import java.util.Arrays;
+
 public class Fibonacci {
     public static void main(String[] args) {
 
+        int[] fibNum = new int[11];
+            System.out.println(Arrays.toString(fibNum)); //Checked that array of integers holds 11 zeroes
 
-        int sum, f1 = 0, f2 = 1;
-        for (int i = 0; i < 10; i++) {
-            sum = f1 + f2;
-            f2 = f1;
-            f1 = sum;
-            System.out.print(sum + " ");
+        fibNum[0] = 1;
+        fibNum[1] = 1;
+        for (int i = 2; i < fibNum.length; i++) {
 
+                fibNum[i] = fibNum[i - 1] + fibNum[i - 2];
+            }
 
-            //use method «printArray(int[] arr) { … }»
-            //inside the method use «for» loop to print each element of an array
-
-
-
-        }
+            System.out.println(Arrays.toString(fibNum));
     }
 }
+
+
+
+
+
 
 
 
