@@ -7,6 +7,10 @@ public class BubbleSort {
             }
             System.out.println();
         }
+
+        static void bubbleSort(int[] array){
+
+        }
     public static void main(String[] args) {
         int[] array = { 3, 0, 34, 1, 18, 2 };
 
