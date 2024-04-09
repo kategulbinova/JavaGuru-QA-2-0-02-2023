@@ -1,4 +1,4 @@
-package Lessons.lesson6;
+package lessons.lesson6;
 
 class IncrementArrayElements {
     private static void printArray(int[] array) {
@@ -19,6 +19,4 @@ class IncrementArrayElements {
         int increment = 5;
         printArray(increaseElementsOfArrayByIncrement(numbers, increment));
     }
-
-
 }
