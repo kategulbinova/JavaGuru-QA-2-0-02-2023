@@ -8,6 +8,7 @@ class BubSort
         System.out.println("Initial array of langth " + bubsor.length);
         boolean sorted = false;
         int runs = -1;
+		int chops = 0;
         
         while(!sorted){
         	sorted = true;
@@ -15,7 +16,8 @@ class BubSort
         
 	        for ( int i=0; i< bubsor.length-1; i++){
 	        	if( bubsor[i] > bubsor[i+1]){
-	        		sorted = false;
+	        		chops = chops+1;
+					sorted = false;
 	        		int tmp= bubsor[i];
 	        		bubsor[i] = bubsor [i+1];
 	        		bubsor [i+1]= tmp;
@@ -27,7 +29,7 @@ class BubSort
         }
         //printArray(bubsor);
         //System.out.println("");
-        System.out.println("Array sorted in "+ runs +" runs");
+        System.out.println("Array sorted in "+ runs +" runs" + " and " + chops + " swops");
 	} 
 
  	public static void printArray( int[] myarr){
