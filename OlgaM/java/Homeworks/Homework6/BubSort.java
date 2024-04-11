@@ -29,7 +29,7 @@ class BubSort
         }
         //printArray(bubsor);
         //System.out.println("");
-        System.out.println("Array sorted in "+ runs +" runs" + " and " + chops + " swops");
+        System.out.println("Array sorted in "+ runs +" runs" + " and " + chops + " chops");
 	} 
 
  	public static void printArray( int[] myarr){
