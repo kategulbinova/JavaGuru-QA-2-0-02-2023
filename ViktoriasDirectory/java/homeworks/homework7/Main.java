@@ -4,12 +4,10 @@ public class Main {
 
     // Method check if the age of person is between 18 and 65 and hire or fire them.
     static void personHiring(Person pers){
-        if (pers.getAge() >= 18 & pers.getAge() <= 65) {
+        if (pers.getAge() >= 18 && pers.getAge() <= 65) {
             pers.hire();
-            // System.out.println(person.getName() + " is hired.");
         } else {
             pers.fire();
-            // System.out.println(person.getName() + " is " + person.getAge() + " years old and is not eligible for hiring.");
         }
     }
     // Method makes each person in array one year older.
@@ -62,9 +60,10 @@ public class Main {
         Person[] people = new Person[12]; // Create an array to hold people
 
         // Loop to create new objects using constructor based on birthYear value
-        // set isHire attribute and print person data.
+        // set 'surname' and 'isHire' attributes and print person data.
         for (int i = 0; i < people.length; i++) {
             people[i] = new Person(names[i], birthYears[i]);
+            people[i].setSurname("OneBigHappyFamily");
             personHiring(people[i]);
             printPersonData(people[i]);
         }
