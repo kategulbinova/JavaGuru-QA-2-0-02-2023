@@ -1,4 +1,4 @@
-package Lessons.lesson5;
+package lessons.lesson5;
 
 public class LoopPractice {
     public static void main(String[] args) {

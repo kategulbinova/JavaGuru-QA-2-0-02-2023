@@ -1,4 +1,4 @@
-package Lessons.lesson6;
+package lessons.lesson6;
 
 class ArraysFactorial {
     public static void main(String[] args) {
