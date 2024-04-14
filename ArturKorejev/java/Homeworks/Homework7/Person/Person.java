@@ -43,7 +43,7 @@ public class Person {
     }
 
     public String getName() {
-        return surname;
+        return name;
     }
 
 
