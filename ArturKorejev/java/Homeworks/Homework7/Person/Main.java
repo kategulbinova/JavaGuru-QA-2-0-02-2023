@@ -17,11 +17,11 @@ public class Main {
         }
     }
     static void printNameAndAge(Person candidate) {
-        System.out.println(candidate.getName() + " " + candidate.getSurname() + ", " + candidate.getAge() );
+        System.out.println(candidate.getName() + " " + candidate.getSurname() + " age is " + candidate.getAge() );
 
     }
     static void printPersonsHiringCondition(Person candidate) {
-        System.out.println(candidate.getName() + " " + printIsHire(candidate));
+        System.out.println(candidate.getName() + " " + candidate.getSurname() + " " + printIsHire(candidate));
     }
 
 
