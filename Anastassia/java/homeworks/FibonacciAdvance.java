@@ -8,12 +8,12 @@ public class FibonacciAdvance {
         }
     }
 
-    static void printFibonacciRow(int[] array) {
+    static void printRow(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
     }
-    static void modifyFibonacciRow(int[] array) {
+    static void modifyRow(int[] array) {
        int increment =5;
         for (int i = 0; i < array.length; i++) {
             array[i] = array[i] + increment;
@@ -23,7 +23,7 @@ public class FibonacciAdvance {
     public static void main(String[] args) {
         int[] array = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         getFibonacciRow(array);
-        modifyFibonacciRow(array);
-        printFibonacciRow(array);
+        modifyRow(array);
+        printRow(array);
     }
 }

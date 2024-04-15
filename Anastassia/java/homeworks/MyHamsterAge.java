@@ -1,4 +1,4 @@
-package homeworks.homework4; //current java class location
+package homeworks; //current java class location
 
 public class MyHamsterAge { //new java class created
     public static void main(String[] args){ //created runnable main method

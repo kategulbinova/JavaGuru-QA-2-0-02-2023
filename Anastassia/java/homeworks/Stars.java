@@ -1,4 +1,4 @@
-package homeworks.homework5;
+package homeworks;
 
 public class Stars {
     public static void main(String[] args) {
