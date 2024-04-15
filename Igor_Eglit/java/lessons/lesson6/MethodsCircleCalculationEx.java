@@ -1,4 +1,4 @@
-package Lessons.lesson6;
+package lessons.lesson6;
 
 class MethodsCircleCalculationEx {
     static double calculateCirclePerimeter(int radius) {
