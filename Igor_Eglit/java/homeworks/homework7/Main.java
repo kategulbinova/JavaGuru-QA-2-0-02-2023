@@ -3,13 +3,12 @@ package homeworks.homework7;
 import java.time.LocalDate;
 import java.util.List;
 
-import static homeworks.homework7.AgeStateChanger.celebrateNewYear;
-import static homeworks.homework7.JobStatusChanger.hireOrFireStatic;
+
 import static java.time.LocalDate.now;
 
 class Main {
     public static void main(String[] args) {
-        JobStatusChanger jobStatusChanger = new JobStatusChanger();
+
         Person jane = new Person("Jane", 25);
         Person john = new Person("John");
         System.out.println(jane);
@@ -18,9 +17,9 @@ class Main {
         System.out.println(jane);
         john.setSurname("Eglit");
         System.out.println(john);
-        jobStatusChanger.hire(jane);
+        jane.hire();
         System.out.println(jane);
-        jobStatusChanger.hire(john);
+        john.hire();
         System.out.println(john);
         jane.makeOlderByOneYear();
         System.out.println(jane);
@@ -40,18 +39,19 @@ class OptionalTask {
                         LocalDate.now().withYear(1980), LocalDate.now().withYear(1955), LocalDate.now().withYear(1959),
                         LocalDate.now().withYear(2007), LocalDate.now().withYear(2010), LocalDate.now().withYear(2015)};
         List<Person> people = listOfPeople.makeListOfPeople(names, yearsOfBirth);
+
         for (Person person : people) {
             System.out.println(person);
         }
         System.out.println();
         for (Person person : people) {
-            hireOrFireStatic(person);
+            person.hireOrFire();
             System.out.println(person);
         }
         System.out.println();
         for (Person person : people) {
-            celebrateNewYear(person);
-            hireOrFireStatic(person);
+            person.celebrateNewYear();
+            person.hireOrFire();
             System.out.println(person);
         }
     }
