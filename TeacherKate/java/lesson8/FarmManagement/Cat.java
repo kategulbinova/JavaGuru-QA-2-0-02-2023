@@ -1,4 +1,4 @@
-package lesson8;
+package lesson8.FarmManagement;
 
 public class Cat extends Animal {
     Cat(String name) {

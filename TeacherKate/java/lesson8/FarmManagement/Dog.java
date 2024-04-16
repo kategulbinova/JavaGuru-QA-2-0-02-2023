@@ -1,4 +1,4 @@
-package lesson8;
+package lesson8.FarmManagement;
 
 public class Dog extends Animal {
     String breed; // Only for Dog objects
