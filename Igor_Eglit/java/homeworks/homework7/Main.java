@@ -40,19 +40,10 @@ class OptionalTask {
                         LocalDate.now().withYear(2007), LocalDate.now().withYear(2010), LocalDate.now().withYear(2015)};
         List<Person> people = listOfPeople.makeListOfPeople(names, yearsOfBirth);
 
-        for (Person person : people) {
-            System.out.println(person);
-        }
+        people.forEach(System.out::println);
         System.out.println();
-        for (Person person : people) {
-            person.hireOrFire();
-            System.out.println(person);
-        }
+        people.stream().peek(Person::hireOrFire).forEach(System.out::println);
         System.out.println();
-        for (Person person : people) {
-            person.celebrateNewYear();
-            person.hireOrFire();
-            System.out.println(person);
-        }
+        people.stream().peek(Person::celebrateNewYear).peek(Person::hireOrFire).forEach(System.out::println);
     }
 }
