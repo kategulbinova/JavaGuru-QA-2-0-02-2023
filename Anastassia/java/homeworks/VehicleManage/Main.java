@@ -18,7 +18,6 @@ public class Main {
 
         toyota.driver = "Ivan";
         cat.driver = "Fedor";
-        yaris.driver = "Roman";
         aist.driver = "Nastja";
         nissan.driver = "Denis";
         myMotorbike.driver = "Lena";
@@ -40,7 +39,7 @@ public class Main {
             else if(v instanceof Car)
                 ((Car) v).wash();
             else
-                ((Vehicle) v).fix();
+                v.fix();
         }
 
     }
