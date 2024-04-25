@@ -1,6 +1,9 @@
-package homeworks.homework8.vehicleManagement;
+package homeworks.homework8;
 
-public class Main {
+// importing classes from lesson8 to avoid duplication
+import lessons.lesson8.vehicleManagement.*;
+
+public class MainProgram {
 
     static void printVehicleDriverInfo(Vehicle vehicle){
         System.out.println(vehicle.getDriverInfo());
@@ -29,7 +32,7 @@ public class Main {
         for (Vehicle vehicle : vehicles) {
             String className = vehicle.getClass().getSimpleName();
             // System.out.println(className);
-            System.out.println(className + " " + vehicle.brand);
+            System.out.println(className + " " + vehicle.getBrand());
             switch (className) {
                 case "Truck" -> {
                     ((Truck) vehicle).loadUp();

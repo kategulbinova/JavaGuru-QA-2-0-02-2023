@@ -1,4 +1,4 @@
-package lessons.lesson8.vehiclesManagement;
+package lessons.lesson8.vehicleManagement;
 
 public class Main {
 
