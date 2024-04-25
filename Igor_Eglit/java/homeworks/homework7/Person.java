@@ -32,6 +32,21 @@ class Person {
         setAge(getAge() + 1);
     }
 
+    void hire() {
+        if (getAge() >= 18) setHired(true);
+
+    }
+    void fire() {
+        setHired(false);
+    }
+    void hireOrFire() {
+        int age = getAge();
+        setHired(age >= 18 && age <= 65);
+    }
+    void celebrateNewYear(){
+        makeOlderByOneYear();
+    }
+
     public String getName() {
         return name;
     }
