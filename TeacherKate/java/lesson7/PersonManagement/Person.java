@@ -1,6 +1,6 @@
 package lesson7.PersonManagement;
 
-public class Person {
+ class Person {
     String name;
     String surname;
     int age;
