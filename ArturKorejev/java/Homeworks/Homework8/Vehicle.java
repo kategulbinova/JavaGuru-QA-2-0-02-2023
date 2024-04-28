@@ -13,6 +13,6 @@ public class Vehicle {
     }
 
     String getDriverInfo() {
-        return "Driver's name is " + this.driver;
+        return this.color + " " + this.brand + " " + "Driver's name is " + this.driver;
     }
 }
