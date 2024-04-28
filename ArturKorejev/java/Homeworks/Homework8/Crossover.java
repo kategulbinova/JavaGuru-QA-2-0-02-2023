@@ -4,8 +4,8 @@ public class Crossover extends Car {
 
     boolean fourWheelDrive;
 
-    Crossover(String numberPlate, boolean fourWheelDrive) {
-        super(numberPlate);
+    public Crossover(String color, String brand, String driver) {
+        super();
         this.fourWheelDrive = false;
     }
 

@@ -5,16 +5,18 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-                            Car bmw = new Car("JJ-4231");
-                            Bicycle rockMachine = new Bicycle(12);
-                            Truck scania = new Truck("TX-9081", 13500);
-                            Crossover audiQ7 = new Crossover("HT-6190",true);
-                            Car opel = new Car("LV-2099");
-                            Truck man = new Truck("XV-4977",7500);
-                            Crossover volvoXC60 = new Crossover("FR-1115", false);
-                            Bicycle trek = new Bicycle(22);
-                            Car toyota = new Car("NR-3213");
-                            Car audi = new Car("UC-2129");
+
+                            Car bmw = new Car("Black","BMW","Paul");
+                            Bicycle rockMachine = new Bicycle("Cherry","Rock Machine","John");
+                            Truck scania = new Truck("Navy","Scania","Nick");
+                            Crossover audiQ7 = new Crossover("Orange","Audi","Sarah");
+                            Car opel = new Car("Blue","Opel","Maria");
+                            Truck man = new Truck("Yellow","MAN","Max");
+                            Crossover volvoXC60 = new Crossover("Brown","Volvo","Harry");
+                            Bicycle trek = new Bicycle("Pink","Trek","Lucy");
+                            Car toyota = new Car("Silver","Toyota","Mike");
+                            Car audi = new Car("Red","Audi","Lisa");
+
 
                             bmw.driver = "Paul";
                             bmw.color = "Black";

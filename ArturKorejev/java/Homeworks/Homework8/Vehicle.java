@@ -12,6 +12,9 @@ public class Vehicle {
         this.driver = "Unknown";
     }
 
+    public Vehicle(String color, String brand, String driver) {
+    }
+
     String getDriverInfo() {
         return this.color + " " + this.brand + " " + "Driver's name is " + this.driver;
     }

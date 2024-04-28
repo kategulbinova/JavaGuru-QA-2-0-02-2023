@@ -5,8 +5,8 @@ public class Truck extends Car {
 
     double maxLoad;
 
-    Truck(String numberPlate, double maxLoad) {
-        super(numberPlate);
+    public Truck(String color, String brand, String driver) {
+        super();
         this.maxLoad = maxLoad;
     }
 

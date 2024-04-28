@@ -5,7 +5,7 @@ public class Bicycle extends Vehicle {
     boolean isFolded;
     int speedCount;
 
-    Bicycle(int speedCount) {
+    Bicycle(String color, String brand, String driver) {
         super();
         this.isFolded = false;
         this.speedCount = speedCount;
