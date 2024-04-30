@@ -7,11 +7,10 @@ repositories {
 
 dependencies {
     // Selenium WebDriver
-    implementation 'org.seleniumhq.selenium:selenium-java:4.9.0'
-    implementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.9.0'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.20.0'
 
     // WebDriverManager
-    implementation 'io.github.bonigarcia:webdrivermanager:5.4.1'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.8.0'
     //implementation 'org.testng:testng:7.1.0'
 
     // TestNG
