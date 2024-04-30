@@ -9,3 +9,9 @@ out/
 *.class
 
 *.xml
+
+# Gradle specific
+.gradle/
+/build/
+gradlew
+gradlew.bat
