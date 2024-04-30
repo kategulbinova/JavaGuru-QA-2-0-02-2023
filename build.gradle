@@ -7,9 +7,8 @@ repositories {
 
 dependencies {
     // Selenium WebDriver
-    implementation 'org.seleniumhq.selenium:selenium-java:4.1.0'
-    implementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.8.3'
-    implementation 'org.seleniumhq.selenium:selenium-devtools-v112:4.9.0'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.9.0'
+    implementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.9.0'
 
     // WebDriverManager
     implementation 'io.github.bonigarcia:webdrivermanager:5.4.1'
