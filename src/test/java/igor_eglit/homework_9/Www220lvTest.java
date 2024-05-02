@@ -29,20 +29,20 @@ class Www220lvTest {
         var dropdownPlatums = "dropDownf1502";
         searchByIdAndClick(dropdownPlatums, driver);
 
-        var optionPlatums = "dropDownf150214073483";
-        searchByIdAndClick(optionPlatums, driver);
+        var optionPlatums215 = "dropDownf150214073483";
+        searchByIdAndClick(optionPlatums215, driver);
 
         var dropdownProfils = "dropDownf1511";
         searchByIdAndClick(dropdownProfils, driver);
 
-        var optionProfils = "dropDownf151114836200";
-        searchByIdAndClick(optionProfils, driver);
+        var optionProfils60 = "dropDownf151114836200";
+        searchByIdAndClick(optionProfils60, driver);
 
-        var checkboxTyreProducer = "filterItem_31293_24848211";
-        searchByIdAndClick(checkboxTyreProducer, driver);
+        var checkboxBridgestoneTyreProducer = "filterItem_31293_24848211";
+        searchByIdAndClick(checkboxBridgestoneTyreProducer, driver);
 
-        var selectedProductBlockOnPage = "product-item-inner";
-        searchByClassNameAndClick(selectedProductBlockOnPage, driver);
+        var firstProductBlockOnPage = "product-item-inner";
+        searchByClassNameAndClick(firstProductBlockOnPage, driver);
 
         var uzGrozuButton = "a[widget-attachpoint='addToCart']";
         searchByCssSelectorAndClick(uzGrozuButton, driver);
