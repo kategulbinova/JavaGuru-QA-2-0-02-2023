@@ -1,4 +1,4 @@
-package viktoria;
+package viktoria.lesson9;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -16,7 +16,7 @@ public class MyFirstTest {
         WebElement registeredLink = driver.findElement(By.id("loginRegister"));
         WebElement emailInput = driver.findElement(By.id("email"));
         emailInput.sendKeys("My email");
-        sleep(5000);
+        sleep(3000);
         //registeredLink.click();
         driver.quit();
     }
