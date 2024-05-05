@@ -13,12 +13,12 @@ public class SauceDemoLoginTest {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com");
-        WebElement UsernameField = driver.findElement(By.id("user-name"));
-        UsernameField.sendKeys("standard_user");
-        WebElement PasswordField = driver.findElement(By.id("password"));
-        PasswordField.sendKeys("secret_sauce");
-        WebElement LoginButton = driver.findElement(By.id("login-button"));
-        LoginButton.click();
+        WebElement usernameField = driver.findElement(By.id("user-name"));
+        usernameField.sendKeys("standard_user");
+        WebElement passwordField = driver.findElement(By.id("password"));
+        passwordField.sendKeys("secret_sauce");
+        WebElement loginButton = driver.findElement(By.id("login-button"));
+        loginButton.click();
 
         String currentURL = driver.getCurrentUrl();
         System.out.println(currentURL);
