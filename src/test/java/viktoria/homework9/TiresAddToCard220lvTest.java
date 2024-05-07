@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static java.lang.Thread.sleep;
 
-public class TiresPurchase220lv {
+public class TiresAddToCard220lvTest {
 
     static void clickWebElementFoundByClassName(String className, WebDriver driver) throws InterruptedException {
 

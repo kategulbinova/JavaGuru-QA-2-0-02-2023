@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static java.lang.Thread.sleep;
 
-public class SauceDemoLogin {
+public class SauceDemoLoginTest {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().clearDriverCache().setup();
 
