@@ -24,8 +24,8 @@ public class AliexpressSearchTest {
         driver.get("https://www.aliexpress.com/");
 
         // Close the float window "Subscribe to notifications" with OK
-        WebElement allow = driver.findElement(By.className("_1-SOk"));
-        allow.click();
+        WebElement allowNotifications = driver.findElement(By.className("_1-SOk"));
+        allowNotifications.click();
 
         // Search for anything, for example "iphone 13"
         String searchText = "iphone 13";
@@ -35,7 +35,7 @@ public class AliexpressSearchTest {
         searchSubmit.click();
 
         // Save all results in the List
-        List<WebElement> searchResults = driver.findElements(By.className("search-card-item"));
+        List<WebElement> searchResults = driver.findElements(By.xpath("//a[@class = 'multi--container--1UZxxHY cards--card--3PJxwBm search-card-item']"));
 
         // Print out the size of the List
         System.out.println("Number of search results: " + searchResults.size());
