@@ -8,7 +8,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
-class AliexpressTest {
+class AliexpressSearchResultGalleryTest {
+
+    private static void printLink(List<WebElement> webElements) {
+    webElements.stream()
+            .map(element -> element.getAttribute("href"))
+            .forEach(System.out::println);
+}
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -22,14 +28,15 @@ class AliexpressTest {
         searchButton.click();
         System.out.println("Search button clicked");
 
-        List<WebElement> searchResultsGallery = driver.findElements(By.className("multi--container--1UZxxHY"));
+        List<WebElement> searchResultsGallery = driver
+                .findElements(By.xpath("//a[@class = 'multi--container--1UZxxHY cards--card--3PJxwBm search-card-item']"));
         System.out.println(searchResultsGallery.size() + " search results found");
 
         //Optional: print out all the links of the List using custom method
-        searchResultsGallery.stream()
-                .map(element -> element.getAttribute("href"))
-                .forEach(System.out::println);
+        printLink(searchResultsGallery);
 
         driver.quit();
     }
+
+
 }
