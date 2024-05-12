@@ -16,3 +16,7 @@ out/
 /build/
 gradlew
 gradlew.bat
+
+*.log
+/test-output/
+*.xml

@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class MyFirstTest {
     public static void main(String[] args) throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().clearDriverCache().setup();
         WebDriver driver = new ChromeDriver(); // read about interfaces
         driver.get("https://www.draugiem.lv");
         WebElement registretiesLink = driver.findElement(By.id("loginRegister"));
