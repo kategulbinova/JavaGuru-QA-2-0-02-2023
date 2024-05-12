@@ -32,7 +32,7 @@ public class SSPrintCarBrandList {
 
         }
 
-        //driver.quit();
+        driver.quit();
 
     }
 }
