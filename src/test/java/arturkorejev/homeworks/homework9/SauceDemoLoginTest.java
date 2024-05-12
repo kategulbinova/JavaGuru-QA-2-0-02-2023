@@ -1,4 +1,4 @@
-package arturkorejev.homework9;
+package arturkorejev.homeworks.homework9;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
