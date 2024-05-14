@@ -5,13 +5,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class ErrorMessagePrintTest {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
         driver.get("https://www.draugiem.lv");
+
+        WebDriverWait myWait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        myWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email")) );
 
         WebElement loginField = driver.findElement(By.id("email"));
         loginField.sendKeys("dy@lt.lv");
