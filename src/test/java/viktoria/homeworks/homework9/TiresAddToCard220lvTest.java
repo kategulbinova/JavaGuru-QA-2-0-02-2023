@@ -63,7 +63,7 @@ public class TiresAddToCard220lvTest {
         clickWebElementFoundById("dropDownf1511",driver);
         clickWebElementFoundById("dropDownf151114836200",driver);
 
-        // Ražotājs - click the Bridgestone checkbox
+        // Razotajs - click the Bridgestone checkbox
         clickWebElementFoundById("filterItem_31293_24848211", driver);
 
 
