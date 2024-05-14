@@ -14,6 +14,8 @@ public class HoverOverLoginProfileTest {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
+        driver.manage().window().maximize();
+
         driver.get("http://www.janisroze.lv");
 
         WebElement profileLink = driver.findElement(By.className("account-dropdown"));
