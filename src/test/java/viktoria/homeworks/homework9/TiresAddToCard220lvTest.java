@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.time.Duration;
+
 import static java.lang.Thread.sleep;
 
 public class TiresAddToCard220lvTest {
@@ -38,6 +40,7 @@ public class TiresAddToCard220lvTest {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().clearDriverCache().setup();
         WebDriver driver = new ChromeDriver();
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         // Open the 220.lv website
         driver.get("https://220.lv");
