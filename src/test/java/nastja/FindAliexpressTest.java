@@ -28,7 +28,7 @@ public class FindAliexpressTest {
         System.out.println(searchResults.size());
 
 
-        sleep(3000);
+
         driver.quit();
 
     }
