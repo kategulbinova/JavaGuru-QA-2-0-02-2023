@@ -17,6 +17,7 @@ class JanisRozeLoginPageTest {
 
     private WebDriver driver;
     private Actions actions;
+    private JavascriptExecutor js;
 
     private String URL = "https://www.janisroze.lv/";
     private int EXPLICIT_WAIT = 10;
@@ -35,6 +36,7 @@ class JanisRozeLoginPageTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         actions = new Actions(driver);
+        js = (JavascriptExecutor) driver;
         driver.get(URL);
     }
 
@@ -59,7 +61,6 @@ class JanisRozeLoginPageTest {
 
         //Optional: Scroll to the footer to see the copyright
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();",
                 driver.findElement(By.xpath(locator_Xpath_FooterCopyright)));
 
