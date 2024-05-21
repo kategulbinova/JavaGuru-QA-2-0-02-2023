@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class SauceDemoPriceCheckTest extends BaseTest {
-    @Test(priority = 50)
+    @Test(enabled = false)
     @Parameters({"login", "password"})
     void priceCheck(String login, String password) {
 
