@@ -5,17 +5,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class SauceDemoPriceCheckTest {
+import java.time.Duration;
+
+public class SauceDemoPriceCheckTest extends BaseTest {
     @Test(priority = 50)
     @Parameters({"login", "password"})
     void priceCheck(String login, String password) {
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.saucedemo.com");
 
         WebElement usernameInput = driver.findElement(By.id("user-name"));
         usernameInput.sendKeys(login);
@@ -44,6 +46,5 @@ public class SauceDemoPriceCheckTest {
         WebElement backPackRemoveButton = driver.findElement(By.id("remove-sauce-labs-backpack"));
         backPackRemoveButton.click();
 
-        driver.quit();
     }
 }
