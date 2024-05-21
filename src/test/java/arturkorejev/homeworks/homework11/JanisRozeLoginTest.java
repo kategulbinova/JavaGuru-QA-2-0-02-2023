@@ -51,6 +51,8 @@ public class JanisRozeLoginTest {
 
         WebElement footer = driver.findElement(By.xpath(xPathForFooter));
 
+        //(Optional) using JavascriptExecutor, scroll down until you see the footer
+
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].scrollIntoView(true)",footer);
 
