@@ -24,7 +24,7 @@ public class JanisRozeLoginTest {
 
 
     @Test
-    public void init () {
+    public void janisRozeLoginTest() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
