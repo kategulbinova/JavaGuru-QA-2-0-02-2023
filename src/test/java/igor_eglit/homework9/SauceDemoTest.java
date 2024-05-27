@@ -1,9 +1,9 @@
-package igor_eglit.homework_9;
+package igor_eglit.homework9;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import static igor_eglit.homework_9.SeleniumMethods.*;
+import static igor_eglit.homework9.SeleniumMethods.*;
 
 class SauceDemoTest {
     public static void main(String[] args) throws InterruptedException {

@@ -1,4 +1,4 @@
-package igor_eglit.lesson_9;
+package igor_eglit.lesson9;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

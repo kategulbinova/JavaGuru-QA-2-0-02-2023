@@ -1,4 +1,4 @@
-package igor_eglit.homework_9;
+package igor_eglit.homework9;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

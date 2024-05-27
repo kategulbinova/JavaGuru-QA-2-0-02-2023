@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -41,7 +42,9 @@ class JanisRozeLoginPageTest {
     }
 
     @Test
-    void hoverOverAccountDropdownClickIelogotiesFillCredentialsClickIelogoties() {
+    @Parameters({"email", "password"})
+    void hoverOverAccountDropdownClickIelogotiesFillCredentialsClickIelogoties(String email,
+                                                                               String password) {
         actions.moveToElement(driver.findElement(By.xpath(locator_Xpath_LietotajaProfils)))
                 .build()
                 .perform();
@@ -51,7 +54,7 @@ class JanisRozeLoginPageTest {
                 .click();
 
         driver.findElement(By.id(locator_Id_credentialField_ePastaAdrese))
-                .sendKeys(testAccount_email);
+                .sendKeys(email);
 
         driver.findElement(By.id(locator_Id_credentialField_parole))
                 .sendKeys(testAccount_password);
