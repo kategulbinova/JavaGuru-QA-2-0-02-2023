@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -22,8 +23,8 @@ public class JanisRozeLoginTest {
     private JavascriptExecutor jse;
 
     // Test data definition & initialization
-    private String testMail = "test_email";
-    private String testPassword = "test_pass";
+    //private String testMail = "test_email";
+    //private String testPassword = "test_pass";
 
     @BeforeTest
     public void setUp() {
@@ -37,7 +38,8 @@ public class JanisRozeLoginTest {
     }
 
     @Test
-    public void loginTest() {
+    @Parameters({"testMail", "testPassword"})
+    public void loginTest(String testMail, String testPassword) {
         // Open the JanisRoze website
         driver.get("https://www.janisroze.lv/");
 
