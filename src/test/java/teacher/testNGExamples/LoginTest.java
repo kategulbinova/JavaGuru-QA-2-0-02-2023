@@ -30,12 +30,15 @@ public class LoginTest extends BaseTest {
     @Test
     @Parameters({"login", "password"})
     void loginWrongPassword(String login, String password) {
+        // input login
         WebElement usernameInput = driver.findElement(By.id("user-name"));
         usernameInput.sendKeys(login);
 
+        // input WRONG password
         WebElement passwordInput = driver.findElement(By.id("password"));
         passwordInput.sendKeys(password + "1");
 
+        // click login button
         WebElement loginButton = driver.findElement(By.id("login-button"));
         loginButton.click();
 
@@ -44,6 +47,13 @@ public class LoginTest extends BaseTest {
             Assert.assertTrue(errorMessage.isDisplayed());
         } catch (Exception e) {
             Assert.fail("Error message was not displayed");
+        }
+
+        try {
+            WebElement burgerMenuIcon = driver.findElement(By.id("react-burger-menu-btn"));
+            Assert.fail("User has logged in, which is wrong for wrong password");
+        } catch (Exception e) {
+            Assert.assertTrue(true, "We do not see burger menu item");
         }
 
     }
