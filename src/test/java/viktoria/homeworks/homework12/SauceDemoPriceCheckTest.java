@@ -17,15 +17,7 @@ public class SauceDemoPriceCheckTest extends BaseTest {
     @Parameters({"name", "password"})
     void priceCheck(String name, String password) {
 
-        // Login
-        WebElement usernameInput = driver.findElement(By.id("user-name"));
-        usernameInput.sendKeys(name);
-
-        WebElement passwordInput = driver.findElement(By.id("password"));
-        passwordInput.sendKeys(password);
-
-        WebElement loginButton = driver.findElement(By.id("login-button"));
-        loginButton.click();
+        login(name, password);
 
         // Find item 1, add to the cart and compare prices
         WebElement item1TitleLink = driver.findElement(By.id("item_1_title_link"));
