@@ -82,7 +82,6 @@ class BaseTest {
     List<String> getItemsPricesFromCartToList(){
         driver.findElement(id_shoppingCartButton).click();
         List<WebElement> pricesInCart =driver.findElements(id_itemInventoryPrice);
-        pricesInCart.forEach(WebElement::getText);
         return pricesInCart.stream()
                 .map(WebElement::getText)
                 .collect(Collectors.toList());
