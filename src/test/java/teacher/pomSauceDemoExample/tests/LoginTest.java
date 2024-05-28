@@ -29,7 +29,7 @@ public class LoginTest extends BaseTest {
         InventoryPage inventoryPage = new InventoryPage(driver);
 
         // Step 1: try to login with incorrect password
-        loginPage.login(username, password);
+        loginPage.login(username, password + "0");
 
         // Step 2: check that error message is displayed
         Assert.assertTrue( loginPage.isErrorMessageDisplayed() );
