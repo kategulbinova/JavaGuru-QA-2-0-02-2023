@@ -1,4 +1,4 @@
-package sergey;
+package sergey.homework9;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
