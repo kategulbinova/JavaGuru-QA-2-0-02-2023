@@ -93,8 +93,7 @@ class BaseTest {
                                    String postalCode){
         driver.findElement(id_shoppingCartButton).click();
 
-        js.executeScript("arguments[0].scrollIntoView();",
-                driver.findElement(id_checkOutButtonInCart));
+        scrollPageTillElement(id_checkOutButtonInCart);
         driver.findElement(id_checkOutButtonInCart).click();
 
         driver.findElement(id_firstNameFieldInCheckOut).sendKeys(firstName);
@@ -112,6 +111,10 @@ class BaseTest {
         return Double.parseDouble(driver
                 .findElement(element)
                 .getText().substring(beginIndex));
+    }
+    void scrollPageTillElement(By element){
+        js.executeScript("arguments[0].scrollIntoView();",
+                driver.findElement(element));
     }
 
     @AfterClass(alwaysRun = true)

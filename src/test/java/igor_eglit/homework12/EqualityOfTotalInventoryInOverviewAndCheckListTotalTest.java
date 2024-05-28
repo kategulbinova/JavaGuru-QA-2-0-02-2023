@@ -23,8 +23,7 @@ class EqualityOfTotalInventoryInOverviewAndCheckListTotalTest extends BaseTest {
                 "Last",
                 "1234"
         );
-        js.executeScript("arguments[0].scrollIntoView();",
-                driver.findElement(className_itemTotalCheckOutOverview));
+        scrollPageTillElement(className_itemTotalCheckOutOverview);
 
         var actualTotalCheckout = getParseDouble(className_itemTotalCheckOutOverview, 13);
         var checkSum = getListTotalPriceAndParseDouble(priceCheckList);
