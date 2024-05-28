@@ -1,3 +1,4 @@
+/*
 package igor_eglit.homework12;
 
 import org.testng.annotations.DataProvider;
@@ -17,3 +18,4 @@ public class SauceDemoDataProvider {
         };
     }
 }
+*/

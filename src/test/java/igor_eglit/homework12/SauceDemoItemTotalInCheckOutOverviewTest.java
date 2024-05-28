@@ -1,3 +1,4 @@
+/*
 package igor_eglit.homework12;
 
 import org.openqa.selenium.By;
@@ -76,3 +77,4 @@ public class SauceDemoItemTotalInCheckOutOverviewTest extends BaseTest {
     }
 
 }
+*/

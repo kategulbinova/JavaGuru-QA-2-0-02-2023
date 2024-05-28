@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -12,6 +13,9 @@ import org.testng.annotations.BeforeClass;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+
+import static java.lang.Thread.sleep;
 
 class BaseTest {
     //credentials
@@ -56,6 +60,58 @@ class BaseTest {
         driver.get("https://www.saucedemo.com");
         wait = new WebDriverWait(driver, Duration.ofSeconds(IMPLICIT_WAIT));
         js = (JavascriptExecutor) driver;
+    }
+
+    void login(String userName, String password) {
+        driver.findElement(id_credentialField_user).sendKeys(userName);
+        driver.findElement(id_credentialField_password).sendKeys(password);
+        driver.findElement(id_loginButton).click();
+    }
+
+    List<String> putItemInCartSavePriceToCheckList(By... itemLocator){
+        List<String> priceCheckList = new ArrayList<>();
+        for (By locator : itemLocator) {
+            driver.findElement(locator).click();
+            driver.findElement(id_addToCartOnItemPage).click();
+            String price = driver.findElement(className_itemPriceFromItemPage).getText();
+            priceCheckList.add(price);
+            driver.findElement(id_backToProductListing).click();
+        }
+        return priceCheckList;
+    }
+    List<String> getItemsPricesFromCartToList(){
+        driver.findElement(id_shoppingCartButton).click();
+        List<WebElement> pricesInCart =driver.findElements(id_itemInventoryPrice);
+        pricesInCart.forEach(WebElement::getText);
+        return pricesInCart.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
+    }
+
+    void proceedToCheckOutOverview(String firstName,
+                                   String lastName,
+                                   String postalCode){
+        driver.findElement(id_shoppingCartButton).click();
+
+        js.executeScript("arguments[0].scrollIntoView();",
+                driver.findElement(id_checkOutButtonInCart));
+        driver.findElement(id_checkOutButtonInCart).click();
+
+        driver.findElement(id_firstNameFieldInCheckOut).sendKeys(firstName);
+        driver.findElement(id_lastNameFieldInCheckOut).sendKeys(lastName);
+        driver.findElement(id_postalCodeFieldInCheckOut).sendKeys(postalCode);
+        driver.findElement(id_continueButtonInCheckOut).click();
+    }
+    double getListTotalPriceAndParseDouble(List<String> pricesList) {
+        return pricesList
+                .stream()
+                .map(price -> Double.parseDouble(price.substring(1)))
+                .reduce(0.0, Double::sum);
+    }
+    double getParseDouble(By element, int beginIndex) {
+        return Double.parseDouble(driver
+                .findElement(element)
+                .getText().substring(beginIndex));
     }
 
     @AfterClass(alwaysRun = true)
