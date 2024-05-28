@@ -8,7 +8,7 @@ public class HomePage {
     WebDriver driver;
 
     String loginFieldLocatorId = "user-name";
-    String passwordFieldLoactorId = "password";
+    String passwordFieldLocatorId = "password";
     String loginButtonLocatorId = "login-button";
 
     public HomePage(WebDriver driver) {
@@ -17,7 +17,7 @@ public class HomePage {
 
     public void login(String login, String password) {
         WebElement loginField = driver.findElement(By.id(loginFieldLocatorId));
-        WebElement passwordField = driver.findElement(By.id(passwordFieldLoactorId));
+        WebElement passwordField = driver.findElement(By.id(passwordFieldLocatorId));
         WebElement loginButton = driver.findElement(By.id(loginButtonLocatorId));
 
         loginField.sendKeys(login);
