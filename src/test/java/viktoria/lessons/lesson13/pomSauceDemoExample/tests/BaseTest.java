@@ -1,32 +1,25 @@
 package viktoria.lessons.lesson13.pomSauceDemoExample.tests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
-public class BaseTest {
-    WebDriver driver;
-    WebDriverWait wait;
+import static viktoria.lessons.lesson13.pomSauceDemoExample.utils.DriverProvider.closeDriver;
+import static viktoria.lessons.lesson13.pomSauceDemoExample.utils.DriverProvider.getCurrentDriver;
 
+public class BaseTest {
+     WebDriverWait wait;
     @BeforeMethod
     void setUp(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        driver.get("https://www.saucedemo.com");
-        driver.manage().window().maximize();
+        wait = new WebDriverWait(getCurrentDriver(), Duration.ofSeconds(5));
+        //getCurrentDriver().manage().window().maximize();
+        getCurrentDriver().get("https://www.saucedemo.com");
     }
-
     @AfterMethod
     public void tearDown() {
         // Quit the driver
-        if (driver != null) {
-            driver.quit();
-        }
+        closeDriver();
     }
 }
