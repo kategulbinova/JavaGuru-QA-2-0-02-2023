@@ -4,21 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class HomePage {
-    WebDriver driver;
+import static teacher.pomSauceDemoTestExample.utils.DriverProvider.getCurrentDriver;
 
+public class HomePage {
     String loginFieldLocatorId = "user-name";
     String passwordFieldLocatorId = "password";
     String loginButtonLocatorId = "login-button";
 
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
-    }
-
     public void login(String login, String password) {
-        WebElement loginField = driver.findElement(By.id(loginFieldLocatorId));
-        WebElement passwordField = driver.findElement(By.id(passwordFieldLocatorId));
-        WebElement loginButton = driver.findElement(By.id(loginButtonLocatorId));
+        WebElement loginField = getCurrentDriver().findElement(By.id(loginFieldLocatorId));
+        WebElement passwordField = getCurrentDriver().findElement(By.id(passwordFieldLocatorId));
+        WebElement loginButton = getCurrentDriver().findElement(By.id(loginButtonLocatorId));
 
         loginField.sendKeys(login);
         passwordField.sendKeys(password);
