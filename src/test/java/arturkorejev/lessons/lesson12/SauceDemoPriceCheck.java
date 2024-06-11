@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 
 public class SauceDemoPriceCheck extends BaseTest {
-    @Test(priority = 50)
+    @Test(priority = 60)
     @Parameters({"login", "password"})
     void priceCheck(String login, String password) {
 
