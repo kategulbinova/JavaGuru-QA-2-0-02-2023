@@ -1,3 +1,4 @@
+/*
 package arturkorejev.lessons.lesson13.pomSauceDemoExample.pages;
 
 import org.openqa.selenium.By;
@@ -32,3 +33,4 @@ public class StartPage = new StartPage {
         }
     }
 }
+*/

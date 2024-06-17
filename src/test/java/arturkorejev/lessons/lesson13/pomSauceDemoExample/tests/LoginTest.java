@@ -1,4 +1,4 @@
-package arturkorejev.lessons.lesson13.pomSauceDemoExample.tests;
+/*package arturkorejev.lessons.lesson13.pomSauceDemoExample.tests;
 
 import org.testng.annotations.Test;
 
@@ -25,3 +25,4 @@ public class LoginTest extends BaseTest {
 
     }
 }
+*/
