@@ -64,9 +64,9 @@ public class SauceDemoPricesInTheCartComparison extends BaseTest {
 
 
 
-        Assert.assertEquals(firstItemPrice, firstItemPriceInCart);
+        Assert.assertEquals(firstItemPrice, firstItemPriceInCart, "First Item price doesn't match");
         System.out.println("First Item price is: " + firstItemPrice + " = " + " First Item price IN CART: " + firstItemPriceInCart);
-        Assert.assertEquals(secondItemPrice, secondItemPriceInCart);
+        Assert.assertEquals(secondItemPrice, secondItemPriceInCart, "Second Item price doesn;t match");
         System.out.println("Second Item price is: " + secondItemPrice + " = " + "Second Item price IN CART: " + secondItemPriceInCart);
     }
 
