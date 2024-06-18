@@ -1,52 +1,56 @@
 package sergey.homework11;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 public class JanisRozeLoginTest {
 
-    WebDriver driver;
+    private WebDriver driver;
 
-    @BeforeTest
-    public void setup() {
-        System.setProperty("webdriver.chrome.driver", "path_to_chromedriver");
-        driver = new ChromeDriver();
+    @BeforeClass
+    public void setUp() {
+
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get("https://www.janisroze.lv/");
     }
 
     @Test
-    public void userLoginTest() {
-        WebElement userProfileIcon = driver.findElement(By.xpath("//xpath_to_user_profile_icon"));
-        Actions action = new Actions(driver);
-        action.moveToElement(userProfileIcon).perform();
+    public void LoginTest() {
+        WebElement profileLink = driver.findElement(By.className("account-dropdown"));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(profileLink).build().perform();
+        try {
+                wait(2000);
+        } catch (InterruptedException e) {
+                throw new RuntimeException(e);
 
-        WebElement loginLink = driver.findElement(By.xpath("//xpath_to_login_link"));
-        loginLink.click();
+        }
 
-        // Wait for Login page to appear
-        // Implement wait logic here
 
-        WebElement usernameField = driver.findElement(By.id("username"));
-        WebElement passwordField = driver.findElement(By.id("password"));
+        WebElement logIn = driver.findElement(By.name("Ielogoties"));
+        logIn.click();
 
-        usernameField.sendKeys("your_username");
-        passwordField.sendKeys("your_password");
+        WebElement emailField = driver.findElement(By.id("email"));
+        WebElement passwordField = driver.findElement(By.id("pass"));
+        WebElement loginButton = driver.findElement(By.id("send2"));
 
-        // Click on login button
-        // Implement login button click logic here
+        emailField.sendKeys("hawaji@gmail.com");
+        passwordField.sendKeys("123456");
+        loginButton.click();
     }
 
-    @AfterTest
-    public void tearDown() {
+    @AfterClass
+    public void tearDown(){
         driver.quit();
     }
 }
-
 
 
