@@ -11,6 +11,8 @@ public class SauceDemoPricesInTheCartComparison extends BaseTest {
     @Parameters({"login", "password"})
     void priceCheck(String login, String password) {
 
+        // Log in
+
         WebElement usernameInput = driver.findElement(By.id("user-name"));
         usernameInput.sendKeys(login);
 
@@ -20,16 +22,23 @@ public class SauceDemoPricesInTheCartComparison extends BaseTest {
         WebElement loginButton = driver.findElement(By.id("login-button"));
         loginButton.click();
 
+
+        // Adding the first item (T-Shirt) to the cart
+
         WebElement tShirtLink = driver.findElement(By.id("item_1_title_link"));
         tShirtLink.click();
 
         WebElement tShirtPriceField = driver.findElement(By.className("inventory_details_price"));
         String firstItemPrice = tShirtPriceField.getText();
 
-        addItemToCart();
+        WebElement addTShirtToCart = driver.findElement(By.className("btn_primary"));
+        addTShirtToCart.click();
 
-        WebElement backToProductsButton = driver.findElement(By.id("back-to-products"));
+        WebElement backToProductsButton = driver.findElement(By.className("inventory_details_back_button"));
         backToProductsButton.click();
+
+
+        // Adding the second item (Fleece Jacket) to the cart
 
         WebElement fleeceJacketLink = driver.findElement(By.id("item_5_title_link"));
         fleeceJacketLink.click();
@@ -37,7 +46,11 @@ public class SauceDemoPricesInTheCartComparison extends BaseTest {
         WebElement fleeceJacketPriceField = driver.findElement(By.className("inventory_details_price"));
         String secondItemPrice = fleeceJacketPriceField.getText();
 
-        addItemToCart();
+        WebElement addFleeceJacketToCart = driver.findElement(By.className("btn_primary"));
+        addFleeceJacketToCart.click();
+
+
+        // Go to cart
 
         WebElement shoppingCartIcon = driver.findElement(By.id("shopping_cart_container"));
         shoppingCartIcon.click();
@@ -45,8 +58,11 @@ public class SauceDemoPricesInTheCartComparison extends BaseTest {
         WebElement tShirtPriceInCart = driver.findElement(By.xpath("//*[@id=\"cart_contents_container\"]/div/div[1]/div[3]/div[2]/div[2]/div"));
         String firstItemPriceInCart = tShirtPriceInCart.getText();
 
+
         WebElement fleeceJacketPriceInCart = driver.findElement(By.xpath("//*[@id=\"cart_contents_container\"]/div/div[1]/div[4]/div[2]/div[2]/div"));
         String secondItemPriceInCart = fleeceJacketPriceInCart.getText();
+
+
 
         Assert.assertEquals(firstItemPrice, firstItemPriceInCart);
         System.out.println("First Item price is: " + firstItemPrice + " = " + " First Item price IN CART: " + firstItemPriceInCart);
@@ -54,6 +70,4 @@ public class SauceDemoPricesInTheCartComparison extends BaseTest {
         System.out.println("Second Item price is: " + secondItemPrice + " = " + "Second Item price IN CART: " + secondItemPriceInCart);
     }
 
-    private void addItemToCart() {
-    }
 }
