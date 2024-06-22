@@ -7,6 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
         WebDriver driver;
@@ -18,7 +19,8 @@ public class BaseTest {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.get("https://www.saucedemo.com");
-            wait = new WebDriverWait (driver,Duration.ofSeconds(10));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
         }
 
         @AfterMethod

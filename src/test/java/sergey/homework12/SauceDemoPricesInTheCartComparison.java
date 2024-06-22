@@ -3,13 +3,19 @@ package sergey.homework12;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import static java.lang.Thread.sleep;
+
 public class SauceDemoPricesInTheCartComparison extends BaseTest {
+
     @Test
     @Parameters({"login", "password"})
-    void priceCheck(String login, String password) {
+
+
+    void priceCheck(String login, String password) throws InterruptedException {
 
         // Log in
 
@@ -22,6 +28,7 @@ public class SauceDemoPricesInTheCartComparison extends BaseTest {
         WebElement loginButton = driver.findElement(By.id("login-button"));
         loginButton.click();
 
+        Thread.sleep(2000);
 
         // Adding the first item (T-Shirt) to the cart
 
@@ -37,11 +44,13 @@ public class SauceDemoPricesInTheCartComparison extends BaseTest {
         WebElement backToProductsButton = driver.findElement(By.className("inventory_details_back_button"));
         backToProductsButton.click();
 
+        Thread.sleep(2000);
 
         // Adding the second item (Fleece Jacket) to the cart
 
         WebElement fleeceJacketLink = driver.findElement(By.id("item_5_title_link"));
         fleeceJacketLink.click();
+
 
         WebElement fleeceJacketPriceField = driver.findElement(By.className("inventory_details_price"));
         String secondItemPrice = fleeceJacketPriceField.getText();
@@ -49,6 +58,7 @@ public class SauceDemoPricesInTheCartComparison extends BaseTest {
         WebElement addFleeceJacketToCart = driver.findElement(By.className("btn_primary"));
         addFleeceJacketToCart.click();
 
+        Thread.sleep(2000);
 
         // Go to cart
 
@@ -61,6 +71,8 @@ public class SauceDemoPricesInTheCartComparison extends BaseTest {
 
         WebElement fleeceJacketPriceInCart = driver.findElement(By.xpath("//*[@id=\"cart_contents_container\"]/div/div[1]/div[4]/div[2]/div[2]/div"));
         String secondItemPriceInCart = fleeceJacketPriceInCart.getText();
+
+        Thread.sleep(2000);
 
 
 
